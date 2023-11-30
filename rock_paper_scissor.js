@@ -28,13 +28,11 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for (let index = 0; index < 5; index++) {
-        let playerSelection = prompt("Rock, Paper, or Scissor?");
-        let computerSelection = getComputerChoice();
-        console.log(`Player:\t${playerScore}\nComputer:\t${computerScore}\n`);
-        console.log(`Player:\t${playerSelection}\nComputer:\t${computerSelection}\n`);
-        console.log(playRound(playerSelection, computerSelection));
-    }
+
+    let computerSelection = getComputerChoice();
+    console.log(`Player:\t${playerScore}\nComputer:\t${computerScore}\n`);
+    console.log(`Player:\t${playerSelection}\nComputer:\t${computerSelection}\n`);
+    console.log(playRound(playerSelection, computerSelection));
 
     console.log(`Player:\t${playerScore}\nComputer:\t${computerScore}\n`);
     if (playerScore > computerScore) {
@@ -48,4 +46,24 @@ function game() {
 
 var playerScore = 0;
 var computerScore = 0;
-game();
+// game();
+let buttons = document.querySelectorAll('button');
+for (const button of buttons) {
+    button.addEventListener('click', (e) => {
+        const main = document.querySelector("main");
+        const oldPResult = document.getElementById("pResult");
+        if (null != oldPResult) {
+            oldPResult.parentNode.removeChild(oldPResult);
+        }
+        let result = playRound(button.textContent, getComputerChoice());
+        const divPlayerScore = document.getElementById("score-left");
+        const divComputerScore = document.getElementById("score-right");
+        divPlayerScore.textContent = playerScore;
+        divComputerScore.textContent = computerScore;
+        
+        const pResult = document.createElement('p');
+        pResult.id = "pResult";
+        pResult.textContent = result;
+        main.appendChild(pResult);
+    })
+};

@@ -10,13 +10,35 @@
         <title>Rock Paper Scissor</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
+        <main>
+            <div class="rows-score">
+                <!-- left board -->
+                <div class="right-score">
+                    <h1 class="team">Player</h1>
+                    <div class="score-box">
+                        <div id="score-left">0</div>
+                    </div>
+                </div>
+                <!-- left board -->
+                <!-- right board -->
+                <div class="left-score">
+                    <h1 class="team">Computer</h1>
+                    <div class="score-box">
+                        <div id="score-right">0</div>
+                    </div>
+                </div>
+                <!-- right board -->
+            </div>
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissor">Scissor</button>
+        </main>
         <script src="./rock_paper_scissor.js" async defer></script>
     </body>
 </html>

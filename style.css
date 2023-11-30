@@ -1,0 +1,65 @@
+/* MAIN */
+body {
+    margin: 0;
+    padding: 0;
+    background: #1B244A;
+}
+
+/* Typography */
+
+@font-face {
+    font-family: CursedTimer;
+    src: url(https://www.fontspace.com/cursed-timer-ulil-font-f29411);
+}
+
+.team {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 80px;
+    color: white;
+    margin: auto;
+}
+
+.score-box {
+    font-size: 200px;
+    font-family: CursedTimer;
+    color: #F94F6D;
+    background: black;
+    padding: 50px 20px;
+    border-radius: 50px;
+}
+
+p{
+    margin: 20px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: aliceblue;
+}
+/* Layouts */
+
+.rows-score {
+    width: 1430px;
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+
+.left-score {
+    flex: 1;
+    padding: 5px 20px;
+    align-items: center;
+}
+
+.right-score {
+    flex: 1;
+    padding: 5px 20px;
+    align-items: center;
+}
+
+button {
+    border-radius: 20px;
+    color: white;
+    border: white 2px solid;
+    background: #1B244A;
+    cursor: pointer;
+}
